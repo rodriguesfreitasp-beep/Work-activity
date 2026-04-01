@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Work Activity</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+
+<header>Work Activity</header>
+
+<section id="dashboard" class="active">
+    <div class="ring-container">
+        <div class="ring">
+            <svg width="260" height="260">
+                <circle cx="130" cy="130" r="125" stroke="#ff3b30"></circle>
+                <circle id="ring-month" class="progress color-month" cx="130" cy="130" r="125"></circle>
+            </svg>
+        </div>
+        <div class="ring" style="transform: scale(0.8)">
+            <svg width="260" height="260">
+                <circle cx="130" cy="130" r="125" stroke="#ffcc00"></circle>
+                <circle id="ring-week" class="progress color-week" cx="130" cy="130" r="125"></circle>
+            </svg>
+        </div>
+        <div class="ring" style="transform: scale(0.6)">
+            <svg width="260" height="260">
+                <circle cx="130" cy="130" r="125" stroke="#4cd964"></circle>
+                <circle id="ring-day" class="progress color-day" cx="130" cy="130" r="125"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Salaire gagné ce mois‑ci</div>
+        <div id="salaireMois" class="card-value"></div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Aujourd’hui</div>
+        <div id="salaireJour" class="card-value"></div>
+    </div>
+
+    <div class="timeline card">
+        <div class="card-title">Journée en cours</div>
+        <div class="timeline-bar">
+            <div id="timeline" class="timeline-progress"></div>
+        </div>
+    </div>
+</section>
+
+<section id="history">
+    <h2>Historique du mois</h2>
+    <div id="historyList"></div>
+</section>
+
+<section id="stats">
+    <h2>Statistiques</h2>
+    <div class="stats-box">
+        <div>Total heures travaillées</div>
+        <div id="statsHeures" class="stats-value"></div>
+    </div>
+    <div class="stats-box">
+        <div>Total gagné depuis le 1er avril</div>
+        <div id="statsSalaire" class="stats-value"></div>
+    </div>
+</section>
+
+<nav>
+    <div class="active" onclick="switchTab('dashboard', this)">Dashboard</div>
+    <div onclick="switchTab('history', this)">Historique</div>
+    <div onclick="switchTab('stats', this)">Stats</div>
+</nav>
+
+</body>
+</html>
