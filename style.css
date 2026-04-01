@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Arial;
+}
+
+header {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav {
+    position: fixed;
+    bottom: 0; width: 100%;
+    background: #111;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #222;
+}
+nav div {
+    padding: 15px;
+    font-size: 1.1em; opacity: 0.6;
+}
+nav .active { opacity:1; font-weight:600; }
+
+section { display: none; padding: 20px; }
+section.active { display: block; }
+
+/* --- Anneaux fitness --- */
+.ring-container { width: 260px; height: 260px; margin: 20px auto; position: relative; }
+.ring { width:100%; height:100%; border-radius:50%; position:absolute; }
+.ring svg { transform: rotate(-90deg); }
+.ring circle { fill:none; stroke-width:18; stroke-linecap:round; opacity:0.25; }
+.progress { opacity:1; stroke-dasharray:785; stroke-dashoffset:785; transition:stroke-dashoffset 1s ease-out; }
+.color-month { stroke:#ff3b30; }
+.color-week { stroke:#ffcc00; }
+.color-day { stroke:#4cd964; }
+
+/* --- Cards --- */
+.card { background:#111; padding:20px; margin:15px 0; border-radius:15px; box-shadow:0 0 15px rgba(255,255,255,0.05); }
+.card-title { font-size:1.2em; opacity:0.8; }
+.card-value { font-size:2.1em; font-weight:700; margin-top:10px; }
+
+/* --- Timeline --- */
+.timeline-bar { height:12px; background:#333; border-radius:10px; overflow:hidden; }
+.timeline-progress { height:100%; background:#4cd964; width:0%; transition:width 1s; }
+
+/* --- Historique --- */
+.history-item { padding:15px; border-bottom:1px solid #111; }
+.history-values { opacity:0.7; font-size:0.9em; margin-top:4px; }
+
+/* --- Stats --- */
+.stats-box { text-align:center; padding:20px; }
+.stats-value { font-size:2em; font-weight:700; }
